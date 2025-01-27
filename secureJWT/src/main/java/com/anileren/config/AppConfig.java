@@ -40,6 +40,8 @@ public class AppConfig {
     
     @Bean
     public AuthenticationProvider authenticationProvider(){
+        //Gelen username/password bilgisini alır, UserDetailsService ile DB’den çekilen kullanıcıya ait password ile karşılaştırır.
+        
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 
         authenticationProvider.setUserDetailsService(userDetailsService());
